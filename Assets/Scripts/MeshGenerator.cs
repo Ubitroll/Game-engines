@@ -16,12 +16,12 @@ public class MeshGenerator : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         mesh = GetComponent<MeshFilter>().mesh;
-        meshCollider.GetComponent<MeshCollider>();
+        meshCollider = GetComponent<MeshCollider>();
         vertexList = new List<Vector3>();
         triIndexList = new List<int>();
         UVList = new List<Vector2>();
 
-        CreateQuad(1,1, new Vector2(0,0.5f));
+        CreateQuad(1, 1, new Vector2(0,0.5f));
         CreateQuad(2, 1, new Vector2(0.5f, 0.5f));
         //convert lists of arrays and store in mesh
         mesh.vertices = vertexList.ToArray();
