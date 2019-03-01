@@ -62,7 +62,8 @@ public class VoxelChunk : MonoBehaviour {
                         terrainArray[13, 3, 2] = 4;
                         terrainArray[13, 3, 3] = 4;
                         terrainArray[14, 3, 3] = 4;
-                        terrainArray[15, 3, 3] = 4;
+                        terrainArray[15, 3, 3] = 4;
+
                         terrainArray[x, y, z] = 1;
                     }
                     // Else if the layer is below the fourth
