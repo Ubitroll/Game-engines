@@ -8,6 +8,13 @@ public class VoxelChunk : MonoBehaviour {
     int[,,] terrainArray;
     int chunksize = 16;
 
+    // Delegate Signature
+    public delegate void EventBlockChanged();
+
+    // Event Instances for EventBlockChanged
+    public static event EventBlockChanged OnEventBlockDestroyed;
+    public static event EventBlockChanged OnEventBlockPlaced;
+
 	// Use this for initialization
 	void Start () {
         voxelGenerator = GetComponent<VoxelGenerator>();
@@ -72,6 +79,28 @@ public class VoxelChunk : MonoBehaviour {
                         terrainArray[x, y, z] = 2;
                     }
                 }
+            }
+        }
+    }
+
+    public void SetBlock(Vector3 index, int blockType)
+    {
+        if ((index.x > 0 && index.x < terrainArray.GetLength(0)) && (index.y > 0 && index.y < terrainArray.GetLength(1)) && (index.z > 0 && index.z < terrainArray.GetLength(2)))
+        {
+            // Change the block to the required type
+            terrainArray[(int)index.x, (int)index.y, (int)index.z] = blockType;
+            // Create the new mesh
+            CreateTerrain();
+            // Update the mesh data
+            GetComponent<VoxelGenerator>().UpdateMesh();
+
+            if (blockType == 0)
+            {
+                OnEventBlockDestroyed();
+            }
+            else
+            {
+                OnEventBlockPlaced();
             }
         }
     }

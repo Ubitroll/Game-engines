@@ -32,6 +32,8 @@ public class VoxelGenerator : MonoBehaviour {
 
     public void UpdateMesh()
     {
+        mesh.Clear(); 
+
         //convert lists of arrays and store in mesh
         mesh.vertices = vertexList.ToArray();
         mesh.triangles = triIndexList.ToArray();
@@ -39,6 +41,8 @@ public class VoxelGenerator : MonoBehaviour {
         mesh.RecalculateNormals();
         meshCollider.sharedMesh = null;
         meshCollider.sharedMesh = mesh;
+
+        ClearPreviousData();
     }
 
     // Update is called once per frame
@@ -46,6 +50,14 @@ public class VoxelGenerator : MonoBehaviour {
     {
 		
 	}
+
+    void ClearPreviousData()
+    {
+        vertexList.Clear();
+        triIndexList.Clear();
+        UVList.Clear();
+        numQuads = 0;
+    }
 
     void CreateTextureNameDictionary()
     {
