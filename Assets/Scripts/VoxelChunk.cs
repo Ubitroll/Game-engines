@@ -31,7 +31,20 @@ public class VoxelChunk : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+        if (Input.GetKeyDown(KeyCode.F1))
+        {
+            XMLVoxelFileWriter.SaveChunkToXMLFile(terrainArray, "VoxelChunk");
+        }
+
+        if (Input.GetKeyDown(KeyCode.F2))
+        {
+            // Get terrainarray from XML file
+            terrainArray = XMLVoxelFileWriter.LoadChunkFromXMLFile(16, "VoxelChunk");
+            // Draw the correct faces
+            CreateTerrain();
+            // Update mesh info
+            voxelGenerator.UpdateMesh();
+        }
 	}
 
     void InitialiseTerrain()

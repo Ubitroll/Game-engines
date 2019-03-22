@@ -72,15 +72,17 @@
     <Compile Include="Assets\Scripts\AudioManager.cs" />
     <Compile Include="Assets\Scripts\MeshGenerator.cs" />
     <Compile Include="Assets\Scripts\PlayerScript.cs" />
+    <Compile Include="Assets\Scripts\SelectionSort.cs" />
     <Compile Include="Assets\Scripts\StructTest.cs" />
     <Compile Include="Assets\Scripts\VoxelChunk.cs" />
     <Compile Include="Assets\Scripts\VoxelGenerator.cs" />
+    <Compile Include="Assets\Scripts\XMLVoxelFileWriter.cs" />
     <None Include="Assets\SampleScenes\Shaders\Skybox-Procedural.shader" />
-    <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>D:/GitHub/Working with game engines/Game-engines/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>D:/GitHub/Working with game engines/Game-engines/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.PackageManagerUI.Editor">
+      <HintPath>D:/GitHub/Working with game engines/Game-engines/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
       <HintPath>D:/GitHub/Working with game engines/Game-engines/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
