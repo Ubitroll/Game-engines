@@ -5,8 +5,16 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     // Variables
-    public AudioClip destroyBlockSound;
-    public AudioClip placeBlockSound;
+    public AudioClip dirtDestroyed;
+    public AudioClip dirtPlaced;
+    public AudioClip stoneDestroyed;
+    public AudioClip stonePlaced;
+    public AudioClip grassDestoryed;
+    public AudioClip grassPlaced;
+    public AudioClip sandDestroyed;
+    public AudioClip sandPlaced;
+
+    VoxelGenerator voxelGenerator;
 
     // Start is called before the first frame update
     void Start()
@@ -23,13 +31,52 @@ public class AudioManager : MonoBehaviour
     // Play sound when block destroyed
     void PlayDestoryBlockSound()
     {
-        GetComponent<AudioSource>().PlayOneShot(destroyBlockSound);
+        // Should check which texture it is
+        //if (voxelGenerator.texNames.ToString() == "Dirt")
+        //{
+        //    GetComponent<AudioSource>().PlayOneShot(dirtDestroyed);
+        //}
+        //else if (voxelGenerator.texNames.ToString() == "Grass")
+        //{
+        //    GetComponent<AudioSource>().PlayOneShot(grassDestoryed);
+        //}
+        //else if (voxelGenerator.texNames.ToString() == "Stone")
+        //{
+        //    GetComponent<AudioSource>().PlayOneShot(stoneDestroyed);
+        //}
+        //else if (voxelGenerator.texNames.ToString() == "Sand")
+        //{
+        //    GetComponent<AudioSource>().PlayOneShot(sandDestroyed);
+        //}
+        //else
+        //{
+            GetComponent<AudioSource>().PlayOneShot(dirtDestroyed);
+        //}
     }
 
     // Play the place block sound
     void PlayPlaceBlockSound()
     {
-        GetComponent<AudioSource>().PlayOneShot(placeBlockSound);
+        //if (voxelGenerator.texNames.ToString() == "Dirt" )
+        //{
+        //    GetComponent<AudioSource>().PlayOneShot(dirtPlaced);
+        //}
+        //else if (voxelGenerator.texNames.ToString() == "Grass")
+        //{
+        //    GetComponent<AudioSource>().PlayOneShot(grassPlaced);
+        //}
+        //else if (voxelGenerator.texNames.ToString() == "Stone")
+        //{
+        //    GetComponent<AudioSource>().PlayOneShot(stonePlaced);
+        //}
+        //else if (voxelGenerator.texNames.ToString() == "Sand")
+        //{
+        //    GetComponent<AudioSource>().PlayOneShot(sandPlaced);
+        //}
+        //else
+        //{
+            GetComponent<AudioSource>().PlayOneShot(dirtPlaced);
+        //}
     }
 
     // When game object is enabled

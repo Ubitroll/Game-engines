@@ -70,13 +70,15 @@
     <Compile Include="Assets\SampleScenes\Scripts\PlaceTargetWithMouse.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
     <Compile Include="Assets\Scripts\AudioManager.cs" />
+    <Compile Include="Assets\Scripts\Lerp.cs" />
     <Compile Include="Assets\Scripts\MeshGenerator.cs" />
     <Compile Include="Assets\Scripts\PlayerScript.cs" />
-    <Compile Include="Assets\Scripts\SelectionSort.cs" />
-    <Compile Include="Assets\Scripts\StructTest.cs" />
     <Compile Include="Assets\Scripts\VoxelChunk.cs" />
     <Compile Include="Assets\Scripts\VoxelGenerator.cs" />
     <Compile Include="Assets\Scripts\XMLVoxelFileWriter.cs" />
+    <Compile Include="Assets\WGE 2D Character\2DCharacter\PlayerController2D.cs" />
+    <Compile Include="Assets\WGE 2D Character\2DCharacter\PlayerMovement2D.cs" />
+    <Compile Include="Assets\WGE 2D Character\2DCharacter\ResetPlayerPosition.cs" />
     <None Include="Assets\SampleScenes\Shaders\Skybox-Procedural.shader" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>D:/GitHub/Working with game engines/Game-engines/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>

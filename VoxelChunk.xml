@@ -247,9 +247,7 @@
   <Voxel x="3" y="3" z="4">4</Voxel>
   <Voxel x="3" y="3" z="5">1</Voxel>
   <Voxel x="3" y="3" z="6">1</Voxel>
-  <Voxel x="3" y="3" z="7">1</Voxel>
   <Voxel x="3" y="3" z="8">1</Voxel>
-  <Voxel x="3" y="3" z="9">1</Voxel>
   <Voxel x="3" y="3" z="10">1</Voxel>
   <Voxel x="3" y="3" z="11">1</Voxel>
   <Voxel x="3" y="3" z="12">1</Voxel>
@@ -311,15 +309,24 @@
   <Voxel x="4" y="3" z="4">4</Voxel>
   <Voxel x="4" y="3" z="5">1</Voxel>
   <Voxel x="4" y="3" z="6">1</Voxel>
-  <Voxel x="4" y="3" z="7">1</Voxel>
   <Voxel x="4" y="3" z="8">1</Voxel>
-  <Voxel x="4" y="3" z="9">1</Voxel>
   <Voxel x="4" y="3" z="10">1</Voxel>
   <Voxel x="4" y="3" z="11">1</Voxel>
   <Voxel x="4" y="3" z="12">1</Voxel>
   <Voxel x="4" y="3" z="13">1</Voxel>
   <Voxel x="4" y="3" z="14">1</Voxel>
   <Voxel x="4" y="3" z="15">1</Voxel>
+  <Voxel x="4" y="4" z="11">1</Voxel>
+  <Voxel x="4" y="5" z="11">1</Voxel>
+  <Voxel x="4" y="6" z="11">1</Voxel>
+  <Voxel x="4" y="7" z="11">1</Voxel>
+  <Voxel x="4" y="8" z="11">1</Voxel>
+  <Voxel x="4" y="9" z="11">1</Voxel>
+  <Voxel x="4" y="10" z="11">1</Voxel>
+  <Voxel x="4" y="11" z="11">1</Voxel>
+  <Voxel x="4" y="12" z="11">1</Voxel>
+  <Voxel x="4" y="13" z="11">1</Voxel>
+  <Voxel x="4" y="14" z="11">1</Voxel>
   <Voxel x="5" y="0" z="0">2</Voxel>
   <Voxel x="5" y="0" z="1">2</Voxel>
   <Voxel x="5" y="0" z="2">2</Voxel>
@@ -376,7 +383,6 @@
   <Voxel x="5" y="3" z="5">1</Voxel>
   <Voxel x="5" y="3" z="6">1</Voxel>
   <Voxel x="5" y="3" z="7">1</Voxel>
-  <Voxel x="5" y="3" z="8">1</Voxel>
   <Voxel x="5" y="3" z="9">1</Voxel>
   <Voxel x="5" y="3" z="10">1</Voxel>
   <Voxel x="5" y="3" z="11">1</Voxel>
@@ -440,8 +446,9 @@
   <Voxel x="6" y="3" z="5">1</Voxel>
   <Voxel x="6" y="3" z="6">1</Voxel>
   <Voxel x="6" y="3" z="7">1</Voxel>
-  <Voxel x="6" y="3" z="8">1</Voxel>
   <Voxel x="6" y="3" z="9">1</Voxel>
+  <Voxel x="6" y="3" z="10">1</Voxel>
+  <Voxel x="6" y="3" z="11">1</Voxel>
   <Voxel x="6" y="3" z="12">1</Voxel>
   <Voxel x="6" y="3" z="13">1</Voxel>
   <Voxel x="6" y="3" z="14">1</Voxel>
@@ -502,7 +509,6 @@
   <Voxel x="7" y="3" z="5">1</Voxel>
   <Voxel x="7" y="3" z="6">1</Voxel>
   <Voxel x="7" y="3" z="7">1</Voxel>
-  <Voxel x="7" y="3" z="8">1</Voxel>
   <Voxel x="7" y="3" z="9">1</Voxel>
   <Voxel x="7" y="3" z="10">1</Voxel>
   <Voxel x="7" y="3" z="11">1</Voxel>
@@ -565,9 +571,6 @@
   <Voxel x="8" y="3" z="4">1</Voxel>
   <Voxel x="8" y="3" z="5">1</Voxel>
   <Voxel x="8" y="3" z="6">1</Voxel>
-  <Voxel x="8" y="3" z="7">1</Voxel>
-  <Voxel x="8" y="3" z="8">1</Voxel>
-  <Voxel x="8" y="3" z="9">1</Voxel>
   <Voxel x="8" y="3" z="10">1</Voxel>
   <Voxel x="8" y="3" z="11">1</Voxel>
   <Voxel x="8" y="3" z="12">1</Voxel>
@@ -629,9 +632,6 @@
   <Voxel x="9" y="3" z="4">1</Voxel>
   <Voxel x="9" y="3" z="5">1</Voxel>
   <Voxel x="9" y="3" z="6">1</Voxel>
-  <Voxel x="9" y="3" z="7">1</Voxel>
-  <Voxel x="9" y="3" z="8">1</Voxel>
-  <Voxel x="9" y="3" z="9">1</Voxel>
   <Voxel x="9" y="3" z="10">1</Voxel>
   <Voxel x="9" y="3" z="11">1</Voxel>
   <Voxel x="9" y="3" z="12">1</Voxel>

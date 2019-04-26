@@ -6,8 +6,13 @@ public class PlayerScript : MonoBehaviour {
 
     public VoxelChunk voxelChunk;
 
-	// Use this for initialization
-	void Start () {
+    public GameObject dirtBlock;
+    public GameObject sandBlock;
+    public GameObject stoneBlock;
+    public GameObject grassBlock;
+
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -19,6 +24,7 @@ public class PlayerScript : MonoBehaviour {
             if (PickThisBlock(out v, 4))
             {
                 voxelChunk.SetBlock(v, 0);
+                Instantiate(dirtBlock);
             }
         }
         else if (Input.GetButtonDown("Fire2"))

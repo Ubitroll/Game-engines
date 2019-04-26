@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class VoxelChunk : MonoBehaviour {
 
     public VoxelGenerator voxelGenerator;
-    int[,,] terrainArray;
-    int chunksize = 16;
+    public int[,,] terrainArray;
+    public int chunksize = 16;
 
     // Delegate Signature
     public delegate void EventBlockChanged();
@@ -15,8 +16,20 @@ public class VoxelChunk : MonoBehaviour {
     public static event EventBlockChanged OnEventBlockDestroyed;
     public static event EventBlockChanged OnEventBlockPlaced;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
+        InitialiseMesh();
+        // Get terrainarray from XML file
+        terrainArray = XMLVoxelFileWriter.LoadChunkFromXMLFile(16, "AssessmentChunk1");
+        // Draw the correct faces
+        CreateTerrain();
+        // Update mesh info
+        voxelGenerator.UpdateMesh();
+    }
+	
+    // Initialises the mesh
+    void InitialiseMesh()
+    {
         voxelGenerator = GetComponent<VoxelGenerator>();
 
         // Instantiate the array with size based on chunksize
@@ -27,26 +40,32 @@ public class VoxelChunk : MonoBehaviour {
         CreateTerrain();
 
         voxelGenerator.UpdateMesh();
-	}
-	
+    }
+
 	// Update is called once per frame
 	void Update () {
+
         if (Input.GetKeyDown(KeyCode.F1))
         {
-            XMLVoxelFileWriter.SaveChunkToXMLFile(terrainArray, "VoxelChunk");
-        }
-
-        if (Input.GetKeyDown(KeyCode.F2))
-        {
             // Get terrainarray from XML file
-            terrainArray = XMLVoxelFileWriter.LoadChunkFromXMLFile(16, "VoxelChunk");
+            terrainArray = XMLVoxelFileWriter.LoadChunkFromXMLFile(16, "AssessmentChunk1");
             // Draw the correct faces
             CreateTerrain();
             // Update mesh info
             voxelGenerator.UpdateMesh();
         }
-	}
 
+        if (Input.GetKeyDown(KeyCode.F2))
+        {
+            // Get terrainarray from XML file
+            terrainArray = XMLVoxelFileWriter.LoadChunkFromXMLFile(16, "AssessmentChunk2");
+            // Draw the correct faces
+            CreateTerrain();
+            // Update mesh info
+            voxelGenerator.UpdateMesh();
+        }
+    }
+    
     void InitialiseTerrain()
     {
         // Itterate horizontally on width
@@ -61,29 +80,6 @@ public class VoxelChunk : MonoBehaviour {
                     // If we are operating on 4th layer
                     if (y == 3)
                     {
-                        terrainArray[0, 3, 1] = 4;
-                        terrainArray[0, 3, 2] = 4;
-                        terrainArray[0, 3, 3] = 4;
-                        terrainArray[1, 3, 3] = 4;
-                        terrainArray[1, 3, 4] = 4;
-                        terrainArray[2, 3, 4] = 4;
-                        terrainArray[3, 3, 4] = 4;
-                        terrainArray[4, 3, 4] = 4;
-                        terrainArray[5, 3, 4] = 4;
-                        terrainArray[5, 3, 3] = 4;
-                        terrainArray[5, 3, 2] = 4;
-                        terrainArray[6, 3, 2] = 4;
-                        terrainArray[7, 3, 2] = 4;
-                        terrainArray[8, 3, 2] = 4;
-                        terrainArray[9, 3, 2] = 4;
-                        terrainArray[10, 3, 2] = 4;
-                        terrainArray[11, 3, 2] = 4;
-                        terrainArray[12, 3, 2] = 4;
-                        terrainArray[13, 3, 2] = 4;
-                        terrainArray[13, 3, 3] = 4;
-                        terrainArray[14, 3, 3] = 4;
-                        terrainArray[15, 3, 3] = 4;
-
                         terrainArray[x, y, z] = 1;
                     }
                     // Else if the layer is below the fourth
